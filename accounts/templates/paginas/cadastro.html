@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="body_login">
+    <div class="div_cadastro">
+        {% block 'conteudo' %}
+        <form class="cadastro_form" method="POST">{% csrf_token %}
+            {% if messages %}
+                {% for mensagem in messages%}
+                    <script>
+                        alert("{{mensagem}}");
+                    </script>
+                    
+                {% endfor %}
+            {% endif %}
+            <span>Usuario</span>
+            <input type="text" name="usuario" id="">
+            <span>email</span>
+            <input type="email" name="email" id="">
+            <span>Senha</span>
+            <input type="password" name="senha" id="">
+            <span>Repetir senha</span>
+            <input type="password" name="senha_2" id="">
+            <button type="submit">Login</button>
+            <a href="{% url 'login'%}">voltar-se</a>
+        </form>
+        {% endblock %}
+    </div>
+
+</body>
+</html>

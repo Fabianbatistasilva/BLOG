@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'conteudo' %}
+<div class="div_tudo_pesquisado">
+        {% for blog in tipo%}
+        <div class="blog_pesquisado">
+            <h2>{{blog.titulo}}</h2>
+            {% if blog.imagem%}
+            <img src="{{blog.imagem.url}}" alt="">
+            {% endif%}
+            <p>{{blog.conteudo_blog}}</p>
+            <label for="">Autor: {{blog.nome_do_autor}}</label>
+        </div>
+        {% endfor %}
+        <div class="div_paginaçao">
+            {% for paginas in tipo.paginator.page_range%}
+                {% if paginas.number == tipo %}
+                <div class="div_paginaçao_ativa">
+                    <a class="botoes_paginaçao" href="?p={{paginas}}">{{paginas}}</a>
+                </div>
+                {% else %}
+                <div class="div_paginaçao_negativo" >
+                    <a class="botoes_paginaçao" href="?p={{paginas}}">{{paginas}}</a>
+                </div>
+                {% endif%}
+            {% endfor %}
+        </div>
+</div>
+
+<aside>
+    <div class="lista_blogs_disp">
+        <details  class="detalhes_tipos" >    
+            <summary >veja mais</summary>
+            {%for cate in todos %}
+            <a href="{% url 'categoria' cate.id %}">{{cate.titulo}}</a>
+            {% endfor%}
+        </details>
+    </div>
+    <div class="lista_blogs_disp">
+        <details  class="detalhes_tipos" >    
+            <summary >veja mais</summary>
+            {%for cate in categoria %}
+            <a href="{% url 'categoria' cate.id %}">{{cate.categoria}}</a>
+            {% endfor%}
+        </details>
+    </div>
+</aside>
+{% endblock %}

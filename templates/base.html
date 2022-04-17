@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home'%}"><i class="fa fa-home" aria-hidden="true"></i></a>
+        <form class="form_pesq" method="GET" action="{% url 'busca' %}">{% csrf_token %}
+            {% if messages %}
+                {% for mensagem in messages%}
+                    <script>
+                        alert("{{mensagem}}");
+                    </script>
+                    
+                {% endfor %}
+            {% endif %}
+            <input class="inp_pesq" type="search" name="termo" value="{{request.GET.termo}}">
+            <button class="botao_pesq">Pesquisar</button>
+        </form>
+        <a href="{% url 'login'%}"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+    </nav>
+    <section class="loc_sections">
+        {% block 'conteudo' %}
+        {% endblock %}
+    </section>
+    <footer>
+        <label style="align-items: center;" for="">Fabian</label>
+    </footer>
+</body>
+</html>

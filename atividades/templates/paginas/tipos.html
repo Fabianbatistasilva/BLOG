@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'conteudo' %}
+<main>
+    <div class="blogs_inicial_tipo">
+        {%for cate in busca_categoria_livro %}
+        <div class="blogs_inicial">
+            <h2>{{cate.titulo}}</h2>
+            {% if cate.imagem%}
+            <div >
+                <img class="img_blogs_inicio" src="{{cate.imagem.url}}" alt="">
+            </div>
+            {% endif%}
+            <p>{{cate.conteudo_blog}} </p>
+            <label for="">{{cate.publicado}}</label>
+            <h6> Autor :{{cate.nome_do_autor}}</h6>
+        </div>
+        {% endfor%}
+    </div>
+</main>
+<aside>
+    <div class="lista_blogs_disp">
+        <details  class="detalhes_tipos" >    
+            <summary >veja mais</summary>
+            {%for cate in todos %}
+            <a href="{% url 'categoria' cate.id %}">{{cate.titulo}}</a>
+            {% endfor%}
+        </details>
+    </div>
+    <div class="lista_blogs_disp">
+        <details  class="detalhes_tipos" >    
+            <summary >veja mais</summary>
+            {%for cate in categoria %}
+            <a href="{% url 'tipos' cate.id %}">{{cate.categoria}}</a>
+            {% endfor%}
+        </details>
+    </div>
+</aside>
+{% endblock %}

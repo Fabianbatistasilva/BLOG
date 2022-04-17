@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'conteudo' %}
+<main>
+    <div class="criar_blog">
+        <a href="{% url 'novo'%}">crie seu Blog</a>
+    </div>
+    {% for blog in blogs%}
+    <div class="blogs_inicial">
+        <h2>{{blog.titulo}}</h2>
+        {% if blog.imagem%}
+        <div >
+            <img class="img_blogs_inicio" src="{{blog.imagem.url}}" alt="">
+        </div>
+        {% endif%}
+        <p>{{blog.conteudo_blog}} </p>
+        <label for="">{{blog.publicado}}</label>
+        <h6> Autor :{{blog.nome_do_autor}}</h6>
+    </div>
+    {% endfor %}
+        {% for paginas in blogs.paginator.page_range%}
+            {% if paginas.number == blogs %}
+            <div class="div_paginaçao_ativa">
+                <a class="botoes_paginaçao" href="?p={{paginas}}">{{paginas}}</a>
+            </div>
+            {% else %}
+            <div class="div_paginaçao_negativo" >
+                <a class="botoes_paginaçao" href="?p={{paginas}}">{{paginas}}</a>
+            </div>
+            {% endif%}
+        {% endfor %}
+</main>
+<aside>
+    <div class="lista_blogs_disp">
+        <details  class="detalhes_tipos" >    
+            <summary >veja mais</summary>
+            {%for cate in todos %}
+            <a target="_blank" href="{% url 'categoria' cate.id %}">{{cate.titulo}}</a>
+            {% endfor%}
+        </details>
+    </div>
+    <div class="lista_blogs_disp">
+        <details  class="detalhes_tipos" >    
+            <summary >veja mais</summary>
+            {%for cate in categoria %}
+            <a href="{% url 'tipos' cate.id %}">{{cate.categoria}}</a>
+            {% endfor%}
+        </details>
+    </div>
+</aside>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'conteudo' %}
+<main>
+    {% for jogo in jogos%}
+    <div class="blogs_inicial">
+        <h2>{{jogo.titulo}}</h2>
+        <p>{{jogo.conteudo_blog}} </p>
+        {% if jogo%}
+        <div>
+            <img src="{{jogo.imagem}}" alt="">
+        </div>
+        {%else%}
+        <div>
+            <label for="">blogs sem foto</label>
+        </div>
+        {% endif%}
+        <label for="">{{jogo.publicado}}</label>
+        <h6>{{jogo.nome_do_autor}}</h6>
+    </div>
+    {% endfor %}
+    <div class="page">
+        {% for paginas in tipo.paginator.page_range%}
+            {% if tipo.number == tipo %}
+                <a style="background-color: aquamarine;" href="?p={{paginas}}">{{paginas}}</a>
+            {% else %}
+                <a style="background-color: chocolate;" href="?p={{paginas}}">{{paginas}}</a>
+            {% endif%}
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

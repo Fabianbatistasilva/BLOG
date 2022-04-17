@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block 'conteudo' %}
+<form class="blog_form" method="POST">{% csrf_token %}
+    {% if messages %}
+        {% for mensagem in messages%}
+            <script>
+                alert("{{mensagem}}");
+            </script>
+            
+        {% endfor %}
+    {% endif %}
+    <span>Titulo</span>
+    <input class="loc_titulo" type="text" name="Titulo" id="">
+    <span>Conteudo</span>
+    <textarea class="conteudo_novo" name="conteudo" id="" cols="30" rows="100"></textarea>
+    <span>Imagem</span>
+    <input class="loc_imagem" type="file" name="imagem" id="">
+    <span>categoria</span>
+    <select class="loc_categorias" name="categorias" id="">
+        <option value="1">Livro</option>
+        <option value="3">Jogos</option>
+        <option value="2">Filmes</option>
+    </select>
+    <span>Seu nome</span>
+    <input class="loc_nome" type="text" name="nome">
+    <span>data</span>
+    <input class="loc_data" type="date" name="data" id="">
+    <button  type="submit">Criar</button>
+    <a class="url_volta" href="{% url 'home'%}">Volta</a>
+</form>
+{% endblock %}

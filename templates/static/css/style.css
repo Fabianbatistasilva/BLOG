@@ -1,0 +1,492 @@
+body{
+    margin: 0%;
+}
+nav{
+    display: flex ;
+    justify-content:space-between;
+    align-items: center;
+    width: 1fr;
+    height: 60px;
+    background-color: lightskyblue;
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    border-bottom: 2px solid black;
+}
+nav>a{
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: none;
+    color:cadetblue;
+    padding: 10px;
+    border: 2px white solid;
+    border-radius: 10px ;
+    background-color: white;
+    margin-right: 400px;
+    border: 2px outset chocolate;
+    margin-left: 100px;
+}
+nav>a:hover{
+    padding: 12px;
+    color: darkslategrey;
+    border: 4px double black;
+}
+aside{
+    height: max-content;
+    margin-top: 10px;
+    width: 1fr;
+}
+footer{
+    margin-top: 100px;
+    width: 100%;
+    height: 40px;
+    align-items:center;
+    background-color: darkslategray;
+    border-top: 2.5px solid black;
+    display: flex;
+    justify-content: end;
+}
+footer>label{
+    align-items:center;
+    margin-right: 900px;
+    font-size:xx-large;
+    color: white;
+
+}
+footer>label:hover{
+    align-items:center;
+    margin-right: 900px;
+    font-size:xx-large;
+    color: brown;
+    text-transform:uppercase;
+    border-bottom: 2px solid white;
+}
+.loc_sections{
+    display: flex;
+    flex-direction: row;
+}
+.form_pesq{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.inp_pesq{
+    width: 400px;
+    height: 35px;
+    text-align: center;
+    font-size: medium;
+    border: 2px outset chocolate;
+}
+.inp_pesq:hover{
+    color: #2f4f4f;
+    border: 10px double black;
+    transition:1s;
+    padding: 15px;
+    text-align: center;
+}
+
+.botao_pesq{
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    background-color:darkcyan;
+    color: aliceblue;
+    border: 2px outset chocolate;
+    margin-left: 10px;
+    text-align: center;
+    
+}
+.lista_blogs_disp{
+    align-items: center;
+    display:flex;
+    flex-direction: column; 
+    height: max-content;
+    width: 1fr;
+    background-color: lightskyblue;
+    color: chocolate;
+    padding: 50px;
+    border-radius: 50px;
+    border: 2px outset darkslategrey;
+    margin: 100px 20px 20px 20px;
+}
+.detalhes_tipos,.detalhes_tipos>summary,.detalhes_tipos>a{
+    transition: 1s;
+}
+.detalhes_tipos,.detalhes_tipos>a{
+    font-size: larger;
+    font-style: italic;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    border: 3px outset white;
+    text-align: center;
+    padding: 10px;
+    background-color: darkcyan;
+    color: white;
+    margin-bottom: 10px;
+
+    
+
+}
+.detalhes_tipos,.detalhes_tipos>summary{
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    width: 100%;
+}
+.detalhes_tipos>a:hover{
+    background-color: rgba(0, 0, 0, 0.418);
+    color: chocolate;
+    border: 10px double darkcyan;
+}
+.blogs_inicial{
+    display:flex ;
+    flex-direction: column;
+    background-color: rgba(135, 206, 250, 0.548);
+    width: 800px;
+    height: max-content;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    float: left;
+    margin: 50px;
+    padding: 30px;
+    border-radius: 50px;
+    border: 2px outset darkslategrey;
+}
+.loc_div_todos{
+    margin-left: 20px;
+    display:flex ;
+    flex-direction:column;
+    background-color: rgba(135, 206, 250, 0.548);
+    width: 900px;
+    height: max-content;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: justify;
+    margin-top: 100px;
+    padding: 30px;
+    border-radius: 50px;
+    border: 2px outset darkslategrey;
+}
+.page>a{
+    width: 30px;
+    height:14px;
+    border-radius: 20px;
+}
+.blogs_inicial>h2,.loc_div_todos>h2{
+    border-bottom: 3px solid white;
+    width: 80%;
+    height: max-content;
+    text-align: center;
+    text-transform: capitalize;
+    font-size:xx-large;
+    margin-bottom: 70px;
+    padding: 10px;
+}
+.blogs_inicial>p,.loc_div_todos>p{
+    border-bottom: 3px solid white;
+    border-right: 7px double white;
+    border-left: 7px double white;
+    border-top: 3px solid white;
+    width: 800px;
+    padding: 20px;
+}
+.blogs_inicial>label,.loc_div_todos>label{
+    border: 2px solid white ;
+    border-radius: 40px;
+    padding: 5px;
+}
+.div_paginaçao{
+    display: flex;
+    flex-direction: row;
+}
+.div_paginaçao_negativo,.div_paginaçao_ativa{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    background-color:white ;
+    width: 30px;
+    height: 25px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 5px double darkslategrey ;
+}
+.div_tudo_pesquisado{
+    padding: 20px 50px 30px 35px;
+    width: 750px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 50px;
+    margin-top: 100px;
+    align-items: center;
+
+}
+.botoes_paginaçao{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+.img_blogs_inicio,.loc_div_todos>img{
+    width: 500px;
+    height: 400px;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    border: 5px double darkcyan;
+}
+.nao_foto{
+    margin-left: 300px;
+}
+.blog_pesquisado,.blogs_todos{
+    background-color: rgba(0, 139, 139, 0.534);
+    width:650px ;
+    height: max-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    border: 6px double black;
+    border-radius: 10% 10%;
+    padding:40px;
+    margin-bottom: 40px;
+}
+.blog_pesquisado>img,.div_imagem_listados>img{
+    width: 500px;
+    height: 400px;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 5px double darkcyan;
+
+}
+.blog_pesquisado>h2{
+    border-top: 7px double white;
+    margin-top: 100px;
+    border-bottom: 3px solid white;
+    width: 80%;
+    height: max-content;
+    text-align: center;
+    text-transform: capitalize;
+    font-size:xx-large;
+}
+.blog_pesquisado>p{
+    border-bottom: 3px solid white;
+    width: 100%;
+    padding: 5px;
+    text-align: justify;
+}
+.blog_pesquisado>label{
+    border-bottom: 3px solid white;
+    width: 100%;
+    padding: 5px;
+}
+.login_form{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+    margin-bottom: 275px;
+    align-items:center ;
+    padding-top: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.801);
+    border: 3px outset darkcyan;
+
+}
+.login_form>a{
+    background-color: white;
+    width: 200px;
+    text-transform: capitalize;
+    font-style: italic;
+    margin-top: 50px;
+    color: blue;
+    border: 5px double darkcyan;
+    font-size:larger;
+}
+.login_form>a:hover{
+    color: white;
+    background-color: darkslategrey;
+}
+.login_form>input{
+    width: 50%;
+    margin-bottom: 20px;
+    border: 3px outset darkcyan;
+    height: 30px;
+    text-align: center;
+}
+
+.login_form>button{
+    width: 200px;
+    border: 3px outset darkcyan;
+    text-align: center;
+    font-weight: bold;
+    height: 30px;
+
+}
+.login_form>span{
+    color: black;
+    font-weight: bolder ;
+}
+.loc_sections{
+    margin-bottom: 200px;
+
+}
+.blogs_inicial_tipo{
+    align-items: center;
+}
+.body_login{
+    background-image: url('/media/fundo_login.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
+}
+.cadastro_form{
+    height: 500px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+    margin-bottom: 275px;
+    align-items:center ;
+    padding-top: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.801);
+    border: 3px outset darkcyan;
+
+}
+.cadastro_form>a{
+    background-color: white;
+    width: 200px;
+    text-transform: capitalize;
+    font-style: italic;
+    margin-top: 50px;
+    color: blue;
+    border: 5px double darkcyan;
+    font-size:larger;
+}
+.cadastro_form>a:hover{
+    color: white;
+    background-color: darkslategrey;
+}
+.cadastro_form>input{
+    width: 50%;
+    margin-bottom: 20px;
+    border: 3px outset darkcyan;
+    height: 30px;
+    text-align: center;
+}
+
+.cadastro_form>button{
+    width: 200px;
+    border: 3px outset darkcyan;
+    text-align: center;
+    font-weight: bold;
+    height: 30px;
+
+}
+.cadastro_form>span{
+    color: black;
+    font-weight: bolder ;
+}
+.criar_blog{
+    width: 200px;
+    text-align: center;
+    background-color: darkcyan;
+    border-radius:  10px 30px;
+    margin-left: 100px;
+    margin-top: 100px;
+    padding: 10px;
+    border: 5px double white;
+}
+.criar_blog>a{
+    font-size: larger;
+    color: white;
+    text-decoration: none;
+}
+.criar_blog:hover{
+    background-color:darkslategrey ;
+}
+.blog_form{
+    height: max-content;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+    margin-bottom: 275px;
+    align-items:center ;
+    padding-top: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.801);
+    border: 3px outset darkcyan;
+
+
+}
+.conteudo_novo{
+    width: 500px;
+    height: 300px;
+    text-align:left;
+}
+.blog_form>input{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.url_volta{
+    width: 100px;
+    background-color: darkcyan;
+    border-radius:  10px 30px;
+    margin-top: 50px;
+    padding: 10px;
+    border: 5px double white;
+    font-size: larger;
+    color: white;
+    text-decoration: none;
+}
+.url_volta:hover{
+    background-color:darkslategrey ;
+}
+.loc_titulo,.conteudo_novo,.loc_imagem,.loc_categorias,.loc_nome,.loc_data{
+    border: 5px double darkcyan;
+}
+.loc_titulo,.loc_nome,.loc_categorias>option,.loc_categorias{
+    width: 300px;
+}
+.loc_titulo,.loc_imagem,.loc_categorias,.loc_nome,.loc_data{
+    text-align: center;
+}
+.blog_form>span{
+    margin-top: 3px;
+    text-transform: capitalize;
+    border-bottom: 1px solid black;
+    margin-bottom: 3px;
+}
+.blog_form>button{
+    width: 400px;
+    border: 3px outset darkcyan;
+    text-align: center;
+    font-weight: bold;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.blog_form>button:hover{
+    background-color:darkslategrey ;
+    color: white;
+
+}
+
