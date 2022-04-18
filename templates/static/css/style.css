@@ -490,3 +490,87 @@ footer>label:hover{
 
 }
 
+@media(max-width:1360px){
+    .loc_sections{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+    aside{
+        height: max-content;
+        margin-top: 10px;
+        width: 100%;
+        align-items: center;
+        margin-left: 30px;
+    }
+    nav{
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+    nav>a{
+        display: flex;
+        justify-content: space-around;
+        margin-left: 200px;
+        margin-right: 200px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 400px;
+    }
+    .paginaçao_div{
+        display: flex;
+        flex-direction:row ;
+    }
+}
+@media(max-width:1225px){
+    nav>a{
+        display: flex;
+        justify-content: space-around;
+        margin-left: 100px;
+        margin-right: 200px;
+    }
+}
+@media(max-width:600px){
+    nav{
+        display: flex ;
+        width: 1fr;
+        height: 90px;
+        background-color: lightskyblue;
+        font-size: 20px;
+        font-weight: bolder;
+        text-decoration: none;
+        border-bottom: 2px solid black;
+    }
+    nav>a{
+        display: flex;
+        flex-direction: row;
+        font-size: 20px;
+        font-weight: bolder;
+        text-decoration: none;
+        color:cadetblue;
+        padding: 10px;
+        border: 2px white solid;
+        border-radius: 10px ;
+        background-color: white;
+        border: 2px outset chocolate;
+    }
+    .blogs_inicial{
+        display:flex ;
+        flex-direction: column;
+        background-color: rgba(135, 206, 250, 0.548);
+        width: 400px;
+        height: max-content;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+        float: left;
+        margin: 50px;
+        padding: 30px;
+        border-radius: 50px;
+        border: 2px outset darkslategrey;
+    }
+}
